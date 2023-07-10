@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Рекомендательная система</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #333;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 30px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 94.5%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .resources-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .resources-button a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #5c69d9;
+        color: #fff;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .resources-button a:hover {
+        background-color: #4f5aba;
+    }
+</style>
+</head>
+<body>
+    <h1>Рекомендательная система VNDB</h1>
+    <form action="/recommend" method="post">
+        <label for="profile_link">Ссылка на профиль VNDB:</label>
+        <input type="text" id="profile_link" name="profile_link">
+        <input type="submit" value="Получить рекомендации">
+    </form>
+    <div class="resources-button">
+        <a href="/resources">Посетить страницу ресурсов</a>
+    </div>
+</body>
+</html>
